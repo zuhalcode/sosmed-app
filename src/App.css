@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Rubik:wght@400;500;700&display=swap");
+
 :root {
   --yellow: #f5c32c;
   --orange: #fca61f;
@@ -8,8 +10,119 @@
   --cardColor: rgba(255, 255, 255, 0.64);
   --buttonBg: linear-gradient(98.63deg, #f9a225 0%, #f95f35 100%);
   --inputColor: rgba(40, 52, 62, 0.07);
-  --photo: #4CB256;
-  --video: #4A4EB7;
-  --location: #EF5757;
---shedule: #E1AE4A;
+  --photo: #4cb256;
+  --video: #4a4eb7;
+  --location: #ef5757;
+  --shedule: #e1ae4a;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  @apply font-inter;
+}
+
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 18rem auto 20rem;
+}
+
+.blur {
+  @apply absolute w-[22rem] h-[14rem] rounded-full bg-[#a6ddf0] blur-[72px];
+}
+
+.bg-linear-100 {
+  background: linear-gradient(106.23deg, #f99827, #f95f35 100%);
+}
+
+.vl::after {
+  @apply py-5 relative;
+  content: "";
+  position: relative;
+  border-left: 2px solid var(--hrColor);
+}
+
+.option {
+  @apply flex items-center justify-center text-xs px-[10px] p-[5px] rounded-lg hover:cursor-pointer;
+}
+
+.btn {
+  @apply flex items-center border-2 justify-center text-white rounded-md transition-all duration-100 px-5 h-8 hover:cursor-pointer hover:text-orange hover:bg-none hover:border-2 hover:border-solid hover:border-orange;
+  background: var(--buttonBg);
+}
+
+.btn:disabled {
+  background: silver;
+  pointer-events: none;
+}
+
+.post-share {
+  display: flex;
+  gap: 1rem;
+  background-color: var(--cardColor);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.post-share > img {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+}
+
+.post-share > div {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.post-share > div > input {
+  background-color: var(--inputColor);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 17px;
+  border: none;
+  outline: none;
+}
+
+.post-option {
+  display: flex;
+  justify-content: space-around;
+}
+
+.preview-img > svg {
+  @apply absolute right-4 top-2 cursor-pointer;
+}
+
+.preview-img > img {
+  @apply w-full max-h-80 object-cover rounded-lg;
+}
+
+.webname > h1 {
+  font-size: 3rem;
+  background-color: red;
+  background-image: var(--buttonBg);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  -moz-background-clip: text !important;
+  -moz-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+.info-input {
+  @apply border-none outline-none bg-input rounded-lg p-5 flex-auto;
+}
+
+.form {
+  @apply flex bg-card rounded-2xl p-4 flex-col justify-center items-center gap-8 [&>div]:flex [&>div]:gap-4 [&>div]:h-8 [&>div]:w-full;
 }
