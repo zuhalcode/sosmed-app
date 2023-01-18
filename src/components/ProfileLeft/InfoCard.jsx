@@ -28,7 +28,7 @@ const InfoCard = () => {
       }
     };
     fetchUserProfile();
-  }, [user]);
+  }, [profileUserId, user]);
 
   return (
     <div className="flex flex-col gap-3 bg-card p-4 rounded-2xl w-[90%]">
