@@ -1,8 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-// import Cover from "../../img/cover.jpg";
-// import Profile from "../../img/profileImg.jpg";
 
 const ProfileCard = ({ location }) => {
   const { user } = useSelector((state) => state.authReducer.authData);

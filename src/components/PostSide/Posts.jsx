@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { PostData } from "../../data/PostsData";
 import { getTimelinePosts } from "../../actions/PostAction";
 import Post from "./Post";
 

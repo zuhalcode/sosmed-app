@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import profileImg from "../../img/profileImg.jpg";
 
 import {
   UilScenery,

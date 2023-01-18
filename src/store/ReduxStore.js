@@ -1,4 +1,3 @@
-// import { applyMiddleware, compose, createStore } from "redux";
 import { configureStore } from "@reduxjs/toolkit";
 
 import thunk from "redux-thunk";
