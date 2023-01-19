@@ -2,7 +2,6 @@ import React from "react";
 
 const User = ({ person }) => {
   const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER;
-  console.log(person.coverPicture);
   return (
     <div className="flex justify-between items-center">
       <div className="flex gap-3">

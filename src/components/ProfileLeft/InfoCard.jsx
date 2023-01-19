@@ -28,12 +28,8 @@ const InfoCard = () => {
       }
     };
     fetchUserProfile();
-<<<<<<< HEAD
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
-=======
-  }, [profileUserId, user]);
->>>>>>> f479c0180825e3c34bbb14f39eea201ec9d48a0f
 
   return (
     <div className="flex flex-col gap-3 bg-card p-4 rounded-2xl w-[90%]">

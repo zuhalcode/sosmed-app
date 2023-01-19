@@ -5,7 +5,10 @@ import { Link } from "react-router-dom";
 const ProfileCard = ({ location }) => {
   const { user } = useSelector((state) => state.authReducer.authData);
   const posts = useSelector((state) => state.postReducer.posts);
+
   const publicServer = process.env.REACT_APP_PUBLIC_FOLDER;
+
+  // console.log(publicServer + user.profilePicture);
 
   return (
     <div className="rounded-3xl flex flex-col relative gap-4 overflow-x-clip bg-card pb-3">
